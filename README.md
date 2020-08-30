@@ -7,5 +7,5 @@ You'll need the PIL (pillow) module for python to use this.
 
 USAGE:
 
-data2png.py <your file>
-png2data.py <your file>
+data2png.py \<your file\>
+png2data.py \<your file\>
