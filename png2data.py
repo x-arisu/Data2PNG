@@ -4,9 +4,9 @@ from sys import argv
 
 def main():
     
-    output = argv[2] if (len(argv) > 2) else "out.txt"
+    output = argv[2] if (len(argv) > 2) else "out.data"
     
-    with open(output, 'w') as out:
+    with open(output, 'wb') as out:
         
         #! open image and list its data
         img = Image.open(argv[1])
@@ -27,7 +27,7 @@ def main():
             del data[-1]
         
         #! join the data into a string separated by commas
-        out.write(",".join(map(str, data)))
+        out.write(bytes(data))
 
 if __name__ == '__main__':
     main()
