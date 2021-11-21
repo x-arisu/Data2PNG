@@ -26,7 +26,6 @@ def main():
         while data[-1] == 0:
             del data[-1]
         
-        #! join the data into a string separated by commas
         out.write(bytes(data))
 
 if __name__ == '__main__':
