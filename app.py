@@ -11,8 +11,8 @@ if len(argv) < 2:
 	exit()
 
 if argv[1] == "conv-data":
-    print("converting to data to image...")
+    print("converting from data to image...")
     data.main()
 elif argv[1] == "conv-png":
-    print("converting to image to data...")
+    print("converting from image to data...")
     png.main()
