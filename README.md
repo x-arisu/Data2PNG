@@ -1,13 +1,11 @@
 # Data2PNG
 
-a python script that turns data into a viewable png
+a python script that turns a png into raw data, or the other way around!
 
 
 You'll need the PIL (pillow) module for python to use this.
 
 USAGE:
 
-
-data2png.py \<your file\>
-
-png2data.py \<your file\>
+app.py conv-data <ImageName.png>
+app.py conv-data <out.txt or other data file>
