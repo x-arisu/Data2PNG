@@ -4,12 +4,12 @@ from sys import argv
 
 def main():
     
-    output = argv[2] if (len(argv) > 2) else "out.data"
+    output = argv[3] if (len(argv) > 3) else "out.txt"
     
     with open(output, 'wb') as out:
         
         #! open image and list its data
-        img = Image.open(argv[1])
+        img = Image.open(argv[2])
         pixels = list(img.getdata())
         
         print("Collecting data...")
