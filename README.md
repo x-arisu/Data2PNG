@@ -7,5 +7,5 @@ You'll need the PIL (pillow) module for python to use this.
 
 USAGE:
 
-app.py conv-data <ImageName.png>
-app.py conv-data <out.txt or other data file>
+app.py conv-data <Input File> <Output image name>
+app.py conv-png <Input image file> <Output data/txt file>
