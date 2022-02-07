@@ -3,14 +3,15 @@ from PIL import Image
 from sys import argv
 def main():
   outputFile = "out.png"
-  if (len(argv) > 2):
-    outputFile = argv[2]
-  rawData = open(argv[1], "rb")
+  if (len(argv) > 3):
+    outputFile = argv[3]
+  rawData = open(argv[2], "rb")
   data = rawData.read()
   rawData.close()
   pixelList = []
   tempData = []
   print("Creating pixels...")
+
   for i in data:
     if (len(tempData) == 3):
       pixelList.append((tempData[0],tempData[1],tempData[2]))
