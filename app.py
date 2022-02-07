@@ -1,22 +1,30 @@
-import data2png as data
-import png2data as png
+from concurrent.futures import wait
 from sys import argv
 import tkinter as tk
 from PIL import Image
-
 import tkinter
+import time
+# if argv[1] == "conv-data":
+#     print("converting to data...")
+#     data.main()
+# elif argv[1] == "conv-png":
+#     print("converting to image...")
+#     png.main()
 
 root = tkinter.Tk()
+root.title('image convert')
 
 entry = tkinter.Entry(root)
 entry.pack()
-
 
 def p(n):
     global img
     img = n
     main(img)
     print("converting...")
+    time.sleep(2)
+    print("done!")
+
 
 button = tkinter.Button(root, text="convert to data",command = lambda: p(entry.get()))
 button.pack()
@@ -29,6 +37,7 @@ def p2(n2):
     Idata = n2
     main2(Idata)
     print("converting...")
+
     
 
 button2 = tkinter.Button(root, text="convert to image", command = lambda: p2(entry2.get()))
