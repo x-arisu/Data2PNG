@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
 from PIL import Image
-from sys import argv
-def main():
-  outputFile = "out.png"
-  if (len(argv) > 3):
-    outputFile = argv[3]
-  rawData = open(argv[2], "rb")
+
+def dataToImg(filePath, output):
+  rawData = open(filePath, "rb")
   data = rawData.read()
   rawData.close()
   pixelList = []
@@ -26,7 +23,4 @@ def main():
   print("Writing image...")
   img = Image.new('RGB', (imgRes, imgRes))
   img.putdata(pixelList)
-  img.save(outputFile)
-
-if __name__ == '__main__':
-  main()
+  img.save(output)

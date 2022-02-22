@@ -1,15 +1,12 @@
 #!/usr/bin/env python3
 from PIL import Image
-from sys import argv
 
-def main():
-    
-    output = argv[3] if (len(argv) > 3) else "out.txt"
+def imgToData(filePath, output):
     
     with open(output, 'wb') as out:
         
         #! open image and list its data
-        img = Image.open(argv[2])
+        img = Image.open(filePath)
         pixels = list(img.getdata())
         
         print("Collecting data...")
@@ -27,6 +24,3 @@ def main():
             del data[-1]
         
         out.write(bytes(data))
-
-if __name__ == '__main__':
-    main()
