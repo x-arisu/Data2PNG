@@ -2,10 +2,13 @@
 
 a python script that turns a png into raw data, or the other way around!
 
+Requirements:
 
-You'll need the PIL (pillow) module for python to use this.
+- **Python 3**
 
-Tkinter is only needed for GUI.
+- PIL (pillow) module
+
+- Tkinter (OPTIONAL: only needed for GUI)
 
 USAGE:
 
